@@ -1,7 +1,8 @@
 const Web3 = require('web3');
 const web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
 
-const account = '0xfa3da03af4709506b56b26e409d1cdacf9d16fc5';
+// const account = '0xfa3da03af4709506b56b26e409d1cdacf9d16fc5';
+const account = '0x8d0cf83e79593D3D3153EBEAcB001D6397A91Aca';
 
 const message = 'abc';
 
@@ -36,3 +37,6 @@ function signHandler(err, signature) {
 let messageHex = '0x' + Buffer.from(message).toString('hex');
 
 web3.eth.sign(account, messageHex, signHandler);
+
+
+//["0xfa3dA03Af4709506B56B26E409D1CDaCf9d16fC5","0x8d0cf83e79593D3D3153EBEAcB001D6397A91Aca"]

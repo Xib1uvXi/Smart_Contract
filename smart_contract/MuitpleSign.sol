@@ -52,12 +52,21 @@ contract MuitpleSign{
             Log(ecrecover(_msgHash, _v, _r, _s),'checkOwnerSign', 'sender和公钥不符');
             throw;
         }
+        _enable = true;
         _;
     }
     
+    modifier checkPermission() {
+        if (!(required <= getConfirmationCount())) {
+            Log(msg.sender, 'checkPermission', '决策签名不足');
+            throw;
+        }
+        _;
+    }
     
+    bool private _enable;
     uint public required;
-    address[] public owners;
+    address[] private owners;
     mapping (address => bool) public isOwner;
     mapping (address => bool) public isConfirmed;
     
@@ -92,5 +101,9 @@ contract MuitpleSign{
         isConfirmed[msg.sender] = true;
         Log(msg.sender,'confirm', '确认成功');
     }
+    
+    function enable() constant checkPermission returns (bool) {
+        return _enable;
+    } 
     
 }
