@@ -1,0 +1,9 @@
+
+send /  call 
+Warning: Return value of low-level calls not used.
+ =>  
+        if (!_address.send()) 
+        throw;
+https://github.com/ethereum/wiki/wiki/Safety
+
+

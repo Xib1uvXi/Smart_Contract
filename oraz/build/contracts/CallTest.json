@@ -1,0 +1,31 @@
+{
+  "contract_name": "CallTest",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "addr",
+          "type": "address"
+        },
+        {
+          "name": "age",
+          "type": "uint256"
+        }
+      ],
+      "name": "callByFun",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    }
+  ],
+  "unlinked_binary": "0x606060405234610000575b610122806100196000396000f300606060405263ffffffff60e060020a600035041663763f358581146022575b6000565b34600057604873ffffffffffffffffffffffffffffffffffffffff60043516602435605c565b604080519115158252519081900360200190f35b6000600060405180807f696e6372656173654167652875696e74323536290000000000000000000000008152506014019050604051809103902090508373ffffffffffffffffffffffffffffffffffffffff168160e060020a9004846040518263ffffffff1660e060020a028152600401808281526020019150506000604051808303816000876161da5a03f194505050505b50929150505600a165627a7a723058208f7b394d47ee962a364d368ec27e27f5bb0e80f8c822b317965e9c2ad5ce82800029",
+  "networks": {},
+  "schema_version": "0.0.5",
+  "updated_at": 1489549653627
+}

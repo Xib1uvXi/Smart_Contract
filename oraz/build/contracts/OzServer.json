@@ -1,0 +1,105 @@
+{
+  "contract_name": "OzServer",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "getT",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "getMyId",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "num",
+          "type": "uint256"
+        }
+      ],
+      "name": "setT",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "_myid",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Deposit",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x60606040526001805534610000575b61013e8061001d6000396000f300606060405263ffffffff60e060020a60003504166322554f34811461003a57806327ed00ee14610059578063f5f3194114610078575b610000565b346100005761004761009a565b60408051918252519081900360200190f35b34610000576100476100a1565b60408051918252519081900360200190f35b34610000576100476004356100b1565b60408051918252519081900360200190f35b6000545b90565b60018054810190819055805b5090565b60008181558173ffffffffffffffffffffffffffffffffffffffff33167f182fa52899142d44ff5c45a6354d3b3e868d5b07db6a65580b39bd321bdaf8ac6100f76100a1565b60408051918252519081900360200190a3506000545b9190505600a165627a7a723058208d665759b4d5d559696732bc46bed9ca6acd3bba1c13ee4a4b4f2d58b116af170029",
+  "networks": {
+    "1489547388160": {
+      "events": {
+        "0x182fa52899142d44ff5c45a6354d3b3e868d5b07db6a65580b39bd321bdaf8ac": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "_myid",
+              "type": "bytes32"
+            },
+            {
+              "indexed": true,
+              "name": "_from",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "_value",
+              "type": "uint256"
+            }
+          ],
+          "name": "Deposit",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x7a2ac28de969810c5219c77d82f65083065a3e1b",
+      "updated_at": 1489549653816
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1489549653816
+}
