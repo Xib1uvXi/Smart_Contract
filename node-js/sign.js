@@ -18,13 +18,14 @@ function signHandler(err, signature) {
         s = '0x' + signature.substr(64, 64);
         v = '0x' + signature.substr(128, 2)
         v = web3.toDecimal(v);
-        if (v != 27 && v != 28) v += 27;
-
+        // if (v != 27 && v != 28) v += 27;
+        
         console.log('        r:', r)
         console.log('        s:', s)
         console.log('        v:', v)
         console.log();
-        console.log(messageHash(message));
+        console.log('        messageHash:',messageHash(message));
+        process.exit();
 
     } else {
         console.error('Coult not sign message:', err);
