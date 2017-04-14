@@ -83,6 +83,7 @@ contract MuitpleSign{
     
     function getPubKey(bytes32 msgHash, uint8 v, bytes32 r, bytes32 s) returns (address pub) {
         pub = ecrecover(msgHash, v, r, s);
+        Log(pub,'getPubKey','解析公钥结果')
     }
     
     function getConfirmationCount() constant returns (uint count) {
@@ -90,7 +91,6 @@ contract MuitpleSign{
             if (isConfirmed[owners[i]]) count += 1;
         }
     }
-    
     
     function confirm(bytes32 msgHash, uint8 v, bytes32 r, bytes32 s) 
         checkSender
