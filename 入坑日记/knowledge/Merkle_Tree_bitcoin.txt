@@ -1,0 +1,13 @@
+why:
+    Simplified Payment Verification 
+        Definition : 
+            A method for verifying particular transactions were included in a block without downloading the entire block. The method is used by some lightweight Bitcoin clients.
+        https://bitcoin.org/en/developer-guide#simplified-payment-verification-spv
+        (original bitcoin paper:   http://www.organicdesign.co.nz/files/8/89/Bitcoin.pdf)
+
+
+what:
+    Merkle Tree可以看做Hash List的泛化
+    在p2p网络下载网络之前，先从可信的源获得文件的Merkle Tree树根。一旦获得了树根，就可以从其他从不可信的源获取Merkle tree。通过可信的树根来检查接受到的Merkle Tree。如果Merkle Tree是损坏的或者虚假的，就从其他源获得另一个Merkle Tree，直到获得一个与可信树根匹配的Merkle Tree。
+    Second Preimage Attack: Merkle tree的树根并不表示树的深度，这可能会导致second-preimage attack，即攻击者创建一个具有相同Merkle树根的虚假文档。一个简单的解决方法在Certificate Transparency中定义：当计算叶节点的hash时，在hash数据前加0x00。当计算内部节点是，在前面加0x01。另外一些实现限制hash tree的根，通过在hash值前面加深度前缀。因此，前缀每一步会减少，只有当到达叶子时前缀依然为正，提取的hash链才被定义为有效。
+    
